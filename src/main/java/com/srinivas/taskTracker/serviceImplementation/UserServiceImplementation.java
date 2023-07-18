@@ -16,7 +16,7 @@ public class UserServiceImplementation implements UserService {
     UserRepo userRepo;
     @Override
     public UserDTO createUser(UserDTO userdto) {
-        //before saving typecast the userdto object to Users entity object.
+        //before saving ,typecast the userdto object to Users entity object.
         Users userObj = convertUserDTOToUsers(userdto);
         Users savedUser = userRepo.save(userObj);
         return convertUsersToUserDTO(savedUser);
