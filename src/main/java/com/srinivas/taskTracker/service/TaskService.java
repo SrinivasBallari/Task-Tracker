@@ -7,5 +7,9 @@ import java.util.List;
 public interface TaskService {
     public TaskDTO saveTask(int userId, TaskDTO taskDTO);
 
-    public List<TaskDTO> fetchAllTasks(Integer userId);
+    public List<TaskDTO> fetchAllTasksOfUser(int userId);
+
+    public TaskDTO fetchParticularTaskOfUser(int userId, int taskId);
+
+    public void deleteParticularTaskOfUser(int userId,int taskId);
 }
